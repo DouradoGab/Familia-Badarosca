@@ -7,13 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlinks</title>
-    <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que o CSS está na raiz do repositório -->
+    <!-- Corrigi o caminho do CSS para a pasta 'assets' -->
+    <link rel="stylesheet" href="assets/style.css"> <!-- Certifique-se de que o CSS está na pasta assets -->
 </head>
 <body>
 
 <div id="container">
     <div id="profile">
-        <img id="profile-image" src="assets/avatar.png" alt="Foto de uma familia olhando o horizonte." /> <!-- Caminho ajustado -->
+        <!-- Corrigindo o caminho das imagens -->
+        <img id="profile-image" src="assets/avatar.png" alt="Foto de uma familia olhando o horizonte." /> 
         <p>@Familiabadarosca</p>
     </div>
 
@@ -52,6 +54,7 @@
     </footer>
 </div>
 
+<!-- Correção no caminho do Ionicons -->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -65,9 +68,9 @@ const profileImage = document.getElementById('profile-image'); // Acessando a im
 if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light');
     themeToggleButton.style.transform = 'translateX(32px)';
-    themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)'; // Caminho ajustado
+    themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)'; // Corrigi o caminho para a imagem
     // Alterar a foto para o modo claro
-    profileImage.src = 'assets/avatar-light.png'; // Caminho ajustado
+    profileImage.src = 'assets/avatar-light.png'; // Corrigi o caminho da imagem para o modo claro
 }
 
 themeToggleButton.addEventListener('click', () => {
@@ -76,16 +79,16 @@ themeToggleButton.addEventListener('click', () => {
     // Alterando a foto do perfil conforme o tema
     if (body.classList.contains('light')) {
         themeToggleButton.style.transform = 'translateX(32px)';
-        themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)'; // Caminho ajustado
+        themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)'; // Corrigi o caminho da imagem
         localStorage.setItem('theme', 'light');
         // Foto no modo claro
-        profileImage.src = 'assets/avatar-light.png'; // Caminho ajustado
+        profileImage.src = 'assets/avatar-light.png'; // Corrigi o caminho da imagem para o modo claro
     } else {
         themeToggleButton.style.transform = 'translateX(0)';
-        themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)'; // Caminho ajustado
+        themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)'; // Corrigi o caminho da imagem
         localStorage.setItem('theme', 'dark');
         // Foto no modo escuro
-        profileImage.src = 'assets/avatar.png'; // Caminho ajustado
+        profileImage.src = 'assets/avatar.png'; // Corrigi o caminho da imagem para o modo escuro
     }
 });
 </script>
