@@ -9,22 +9,22 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(./assets/bg-mobile.jpg);
+    --bg-url: url(assets/bg-mobile.jpg); /* Caminho ajustado */
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(255, 255, 255, 0.2);
-    --switch-bg-url: url(assets/moon-stars.svg);
+    --switch-bg-url: url(assets/moon-stars.svg); /* Caminho ajustado */
 }
 
 .light {
     --text-color: Black;
-    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --bg-url: url(assets/bg-mobile-light.jpg); /* Caminho ajustado */
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
-    --switch-bg-url: url(assets/sun.svg);
+    --switch-bg-url: url(assets/sun.svg); /* Caminho ajustado */
 }
 
 body {
@@ -102,12 +102,12 @@ body {
 /* Modo Light (com o ícone de sol) */
 .light #theme-toggle {
     transform: translateX(32px); /* Movendo o botão para a direita */
-    background-image: url(assets/sun.svg); /* Ícone de sol */
+    background-image: url(assets/sun.svg); /* Caminho ajustado */
 }
 
 /* Modo Dark (com o ícone de lua) */
 #theme-toggle {
-    background-image: url(assets/moon-stars.svg); /* Ícone de lua */
+    background-image: url(assets/moon-stars.svg); /* Caminho ajustado */
 }
 
 /* Estilo para o botão de switch quando está no modo escuro */
@@ -169,10 +169,10 @@ ul li:hover {
 /*media queries*/
 @media (min-width: 700px) {
     :root {
-        --bg-url: url(./assets/bg-desktop.jpg);
+        --bg-url: url(assets/bg-desktop.jpg); /* Caminho ajustado */
     }
 
     .light {
-        --bg-url: url(./assets/bg-desktop-light.jpg);
+        --bg-url: url(assets/bg-desktop-light.jpg); /* Caminho ajustado */
     }
 }

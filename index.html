@@ -7,14 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlinks</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que o CSS está na raiz do repositório -->
 </head>
 <body>
 
 <div id="container">
     <div id="profile">
-        <!-- A imagem agora tem um ID para ser manipulada pelo JavaScript -->
-        <img id="profile-image" src="./assets/avatar.png" alt="Foto de uma familia olhando o horizonte." />
+        <img id="profile-image" src="assets/avatar.png" alt="Foto de uma familia olhando o horizonte." /> <!-- Caminho ajustado -->
         <p>@Familiabadarosca</p>
     </div>
 
@@ -66,9 +65,9 @@ const profileImage = document.getElementById('profile-image'); // Acessando a im
 if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light');
     themeToggleButton.style.transform = 'translateX(32px)';
-    themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
+    themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)'; // Caminho ajustado
     // Alterar a foto para o modo claro
-    profileImage.src = './assets/avatar-light.png';
+    profileImage.src = 'assets/avatar-light.png'; // Caminho ajustado
 }
 
 themeToggleButton.addEventListener('click', () => {
@@ -77,16 +76,16 @@ themeToggleButton.addEventListener('click', () => {
     // Alterando a foto do perfil conforme o tema
     if (body.classList.contains('light')) {
         themeToggleButton.style.transform = 'translateX(32px)';
-        themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
+        themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)'; // Caminho ajustado
         localStorage.setItem('theme', 'light');
         // Foto no modo claro
-        profileImage.src = './assets/avatar-light.png';
+        profileImage.src = 'assets/avatar-light.png'; // Caminho ajustado
     } else {
         themeToggleButton.style.transform = 'translateX(0)';
-        themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)';
+        themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)'; // Caminho ajustado
         localStorage.setItem('theme', 'dark');
         // Foto no modo escuro
-        profileImage.src = './assets/avatar.png';
+        profileImage.src = 'assets/avatar.png'; // Caminho ajustado
     }
 });
 </script>

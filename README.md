@@ -36,7 +36,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Se trata de um DevLinks que nada mais é que um agregador de links para usar como cartão de visitas online.
 Projeto feito para o Discovery da Rocket
 
-- [Acesse o projeto finalizado, online](https://douradogab.github.io/Projeto-discovery-curso/)
+- [Acesse o projeto finalizado, online](https://douradogab.github.io/Familia-Badarosca/)
 
 - [Assistir aulas que inspiraram o projeto](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
 
