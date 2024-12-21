@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlinks</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div id="container">
+    <div id="profile">
+        <!-- A imagem agora tem um ID para ser manipulada pelo JavaScript -->
+        <img id="profile-image" src="./assets/avatar.png" alt="Foto de uma familia olhando o horizonte." />
+        <p>@Familiabadarosca</p>
+    </div>
+
+    <div id="switch">
+        <button id="theme-toggle"></button>
+    </div>
+
+    <ul>
+        <li><a href="https://www.instagram.com/cinthya_souzaaa/">Veja a mamãe do Dev</a></li>
+        <li><a href="https://www.instagram.com/lullydean/">Conheça a noiva do Dev</a></li>
+        <li><a href="https://www.instagram.com/guiiii_douradoo/">Observe o irmão do Dev</a></li>
+        <li><a href="https://www.instagram.com/laah.moura/">Conheça a cunhada do Dev</a></li>
+        <li><a href="https://www.instagram.com/viih._dourado/">Admire a irmã do Dev</a></li>
+    </ul>
+
+    <div id="social-links">
+        <a href="https://www.instagram.com/cinthya_souzaaa/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/lullydean/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/guiiii_douradoo/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/laah.moura/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/viih._dourado/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+    </div>
+
+    <footer>
+        Feito com ❤ por <a href="https://www.instagram.com/douradobual/" id="Douradation">G.Dourado</a> 
+    </footer>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+// Função para alternar entre os modos Light e Dark
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+const profileImage = document.getElementById('profile-image'); // Acessando a imagem do perfil
+
+// Recuperar a preferência de tema do localStorage
+if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light');
+    themeToggleButton.style.transform = 'translateX(32px)';
+    themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
+    // Alterar a foto para o modo claro
+    profileImage.src = './assets/avatar-light.png';
+}
+
+themeToggleButton.addEventListener('click', () => {
+    body.classList.toggle('light');
+    
+    // Alterando a foto do perfil conforme o tema
+    if (body.classList.contains('light')) {
+        themeToggleButton.style.transform = 'translateX(32px)';
+        themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
+        localStorage.setItem('theme', 'light');
+        // Foto no modo claro
+        profileImage.src = './assets/avatar-light.png';
+    } else {
+        themeToggleButton.style.transform = 'translateX(0)';
+        themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)';
+        localStorage.setItem('theme', 'dark');
+        // Foto no modo escuro
+        profileImage.src = './assets/avatar.png';
+    }
+});
+</script>
+</body>
+</html>
